@@ -54,7 +54,6 @@ dependencies {
     compile 'com.squareup.okhttp3:okhttp:3.7.0'
     compile 'com.squareup.okhttp3:logging-interceptor:3.6.0'
     compile 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
-    compile 'com.jakewharton.threetenabp:threetenabp:1.0.3'
     compile 'com.jakewharton.timber:timber:4.5.1'
     compile 'org.jsoup:jsoup:1.10.2'
 
@@ -64,4 +63,9 @@ dependencies {
     compile 'org.jetbrains.kotlinx:kotlinx-coroutines-android:0.16'
 
     kapt "com.android.databinding:compiler:2.3.3"
+}
+kotlin {
+    experimental {
+        coroutines "enable"
+    }
 }
