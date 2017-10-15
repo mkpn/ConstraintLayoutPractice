@@ -3,11 +3,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/all"
-        android:icon="@android:drawable/btn_star"
-        android:title="all" />
+        android:id="@+id/anime"
+        android:icon="@drawable/ic_anime"
+        android:title="anime" />
     <item
-        android:id="@+id/like"
-        android:icon="@android:drawable/checkbox_on_background"
-        android:title="like" />
+        android:id="@+id/manga"
+        android:icon="@drawable/ic_manga"
+        android:title="manga" />
 </menu>

@@ -28,10 +28,10 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNavigation.inflateMenu(R.menu.menu)
         val navigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.all -> {
+                R.id.manga -> {
 
                 }
-                R.id.like -> {
+                R.id.anime -> {
 
                 }
             }
