@@ -10,6 +10,7 @@ import com.example.yoshidamakoto.constraintlayoutpractice.databinding.ActivityMa
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
     val animeFragment = AnimeFragment()
+    val mangaFragment = MangaFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         val navigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.manga -> {
-                    replaceFragment(animeFragment)
+                    replaceFragment(mangaFragment)
                 }
                 R.id.anime -> {
                     replaceFragment(animeFragment)

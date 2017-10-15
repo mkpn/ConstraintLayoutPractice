@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.example.yoshidamakoto.constraintlayoutpractice.MangaRowViewModel" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v4.widget.Space
+            android:id="@+id/topMargin"
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:minHeight="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/black"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="@{vm.title}"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/big_text_size"
+                        tools:text="asdfgh" />
+
+                    <TextView
+                        android:id="@+id/score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title"
+                        android:text="@{vm.score}"
+                        android:textColor="@color/white"
+                        tools:text="5.00" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/header"
+                    android:minHeight="120dp"
+                    android:scaleType="fitCenter" />
+
+                <TextView
+                    android:id="@+id/synopsis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/header"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@+id/image"
+                    android:ellipsize="end"
+                    android:maxLines="4"
+                    android:text="@{vm.synopsis}"
+                    tools:text="asdfjfdkasjdfsklsajflkjalfkjlafjlasjfkajsdlfjkajflajfklskfdl" />
+
+                <TextView
+                    android:id="@+id/airingTerm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/synopsis"
+                    android:layout_marginRight="8dp"
+                    android:text="@{vm.airingTerm}"
+                    tools:text="terewrwr" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</layout>
