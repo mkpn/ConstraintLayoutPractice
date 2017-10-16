@@ -49,8 +49,10 @@ class MangaFragment : Fragment() {
     }
 
     suspend fun getTopPage(): List<Manga> = suspendCoroutine { cont ->
+//        var url = "http://salty-springs-57684.herokuapp.com/manga/all.json"
+        var url = "http://10.0.2.2:8080/manga/all.json"
         val req = Request.Builder()
-                .url("http://10.0.2.2:8080/manga/all.json")
+                .url(url)
                 .get()
                 .build()
 

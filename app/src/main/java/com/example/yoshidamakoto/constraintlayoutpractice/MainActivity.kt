@@ -4,10 +4,10 @@ import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
-import android.support.v7.app.AppCompatActivity
+import android.support.v4.app.FragmentActivity
 import com.example.yoshidamakoto.constraintlayoutpractice.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : FragmentActivity() {
     lateinit var binding: ActivityMainBinding
     val animeFragment = AnimeFragment()
     val mangaFragment = MangaFragment()
@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        binding.toolbar.setTitle(R.string.app_name)
         replaceFragment(animeFragment) // 初期化
         binding.bottomNavigation.inflateMenu(R.menu.menu)
         val navigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
